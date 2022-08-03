@@ -1,0 +1,4 @@
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\Fakes\Interop.bpac.fakes : warning : Nie można wygenerować klasy zastępczej dla bpac.IPrintEvents_SinkHelper: Typ jest zapieczętowany.
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\Fakes\Interop.bpac.fakes : warning : Nie można wygenerować klasy zastępczej dla bpac.IPrintEvents_EventProvider: Typ jest zapieczętowany.
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\Fakes\Interop.bpac.fakes : warning : Nie można wygenerować podkładki dla bpac.IPrintEvents_EventProvider: Typ nie jest widoczny dla: exported or assembly(Interop.bpac.1.3.0.0.Fakes).
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\Fakes\Interop.bpac.fakes : warning : Kompilacja nie powiodła się. Ponawianie próby bez kontraktów kodu

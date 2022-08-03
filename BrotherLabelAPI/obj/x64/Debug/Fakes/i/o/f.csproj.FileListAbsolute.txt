@@ -1,0 +1,2 @@
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\x64\Debug\Fakes\i\o\f.csproj.AssemblyReference.cache
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\x64\Debug\Fakes\i\o\f.csproj.CoreCompileInputs.cache

@@ -1,0 +1,13 @@
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\Debug\BrotherLabelAPI.exe.config
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\Debug\BrotherLabelAPI.exe
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\Debug\BrotherLabelAPI.pdb
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.csproj.AssemblyReference.cache
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.csproj.SuggestedBindingRedirects.cache
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.Properties.Resources.resources
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.csproj.GenerateResource.cache
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.csproj.CoreCompileInputs.cache
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.exe
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.pdb
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\Debug\Interop.bpac.dll
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.MainForm.resources
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\Debug\BrotherLabelAPI.csproj.CopyComplete
