@@ -13,9 +13,14 @@ namespace BrotherLabelAPI
 {
     public partial class MainForm : Form
     {
+        private static MainForm instance;
+
         public MainForm()
         {
+            instance = this;
             InitializeComponent();
+            LocalServer server = new LocalServer();
+            server.Start();
         }
 
         private string fileBaseLinkerProductTemplate = "BASELINKER_PRODUKT.lbx";
@@ -55,6 +60,19 @@ namespace BrotherLabelAPI
             obj.Text += text;
             obj.SetSelection(skip, obj.Text.Length);
             obj.SetFontBold(false);
+        }
+
+        public static void HandleRequest(string name, string id, string ean, string sku)
+        {
+            instance.BeginInvoke(new Action(() =>
+            {
+                instance.txtProduct.Text = name;
+                instance.txtID.Text = id;
+                instance.txtEAN.Text = ean;
+                instance.txtSKU.Text = sku;
+                instance.WindowState = FormWindowState.Normal;
+                instance.Activate();
+            }));
         }
     }
 }

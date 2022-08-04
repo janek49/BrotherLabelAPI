@@ -12,3 +12,4 @@ E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\x86\Debug\BrotherLa
 E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\x86\Debug\BrotherLabelAPI.exe
 E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\x86\Debug\BrotherLabelAPI.pdb
 E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\x86\Debug\BASELINKER_PRODUKT.lbx
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\x86\Debug\NetFrameworkServer.dll
