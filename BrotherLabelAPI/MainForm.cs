@@ -40,9 +40,9 @@ namespace BrotherLabelAPI
                 doc.GetObject("barcodeMain").Text = txtID.Text;
 
                 doc.Save();
-                //   doc.StartPrint("", PrintOptionConstants.bpoHighSpeed);
-                //  doc.PrintOut(1, PrintOptionConstants.bpoHighSpeed);
-                //   doc.EndPrint();
+                doc.StartPrint("", PrintOptionConstants.bpoHighSpeed);
+                doc.PrintOut(1, PrintOptionConstants.bpoHighSpeed);
+                doc.EndPrint();
                 doc.Close();
             }
             else
