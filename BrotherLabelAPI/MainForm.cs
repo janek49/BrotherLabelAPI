@@ -24,12 +24,31 @@ namespace BrotherLabelAPI
         }
 
         private string fileBaseLinkerProductTemplate = "BASELINKER_PRODUKT.lbx";
+        private string fileBaseLinkerProductTemplateSmall = "BASELINKER_PRODUKT_SMALL.lbx";
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private async void btnPrint_Click(object sender, EventArgs e)
+        {
+            await prePrint(fileBaseLinkerProductTemplate);
+        }
+
+        async Task<bool> prePrint(string file)
+        {
+            tabControl1.Enabled = false;
+            WaitDialog wd = new WaitDialog();
+            wd.Show();
+
+            await Task.Run(() => startPrint(file));
+
+            wd.Close();
+            tabControl1.Enabled = true;
+            return true;
+        }
+
+        void startPrint(string file)
         {
             DocumentClass doc = new DocumentClass();
 
-            if (doc.Open(fileBaseLinkerProductTemplate))
+            if (doc.Open(file))
             {
                 doc.GetObject("textProductName").Text = txtProduct.Text;
 
@@ -49,6 +68,7 @@ namespace BrotherLabelAPI
             {
                 MessageBox.Show("Błąd drukowania", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         void setTextField(bpac.Object obj, string lbl, string text)
@@ -70,9 +90,36 @@ namespace BrotherLabelAPI
                 instance.txtID.Text = id;
                 instance.txtEAN.Text = ean;
                 instance.txtSKU.Text = sku;
-                instance.WindowState = FormWindowState.Normal;
-                instance.Activate();
+                if (instance.cbAutoPrint.Checked)
+                {
+                    instance.Invoke(new Action(() => instance.btnPrint_Click(null, null)));
+                }
+                else
+                {
+                    instance.Show();
+                    instance.WindowState = FormWindowState.Normal;
+                    instance.Activate();
+                }
             }));
+        }
+
+        private async void btnPrintSmal_Click(object sender, EventArgs e)
+        {
+            await prePrint(fileBaseLinkerProductTemplateSmall);
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+            }
+        }
+
+        private void taskbarIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }

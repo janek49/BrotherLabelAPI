@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBaselinkerProduct = new System.Windows.Forms.TabPage();
+            this.btnPrintSmal = new System.Windows.Forms.Button();
+            this.cbAutoPrint = new System.Windows.Forms.CheckBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.txtSKU = new System.Windows.Forms.TextBox();
             this.txtEAN = new System.Windows.Forms.TextBox();
@@ -42,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
+            this.taskbarIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.tabControl1.SuspendLayout();
             this.tabBaselinkerProduct.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +63,8 @@
             // 
             // tabBaselinkerProduct
             // 
+            this.tabBaselinkerProduct.Controls.Add(this.btnPrintSmal);
+            this.tabBaselinkerProduct.Controls.Add(this.cbAutoPrint);
             this.tabBaselinkerProduct.Controls.Add(this.btnPrint);
             this.tabBaselinkerProduct.Controls.Add(this.txtSKU);
             this.tabBaselinkerProduct.Controls.Add(this.txtEAN);
@@ -77,6 +82,29 @@
             this.tabBaselinkerProduct.TabIndex = 0;
             this.tabBaselinkerProduct.Text = "Etykieta produktu BaseLinker";
             this.tabBaselinkerProduct.UseVisualStyleBackColor = true;
+            // 
+            // btnPrintSmal
+            // 
+            this.btnPrintSmal.Image = global::BrotherLabelAPI.Properties.Resources.filequickprint;
+            this.btnPrintSmal.Location = new System.Drawing.Point(18, 212);
+            this.btnPrintSmal.Name = "btnPrintSmal";
+            this.btnPrintSmal.Size = new System.Drawing.Size(152, 35);
+            this.btnPrintSmal.TabIndex = 12;
+            this.btnPrintSmal.Text = "Drukuj małą";
+            this.btnPrintSmal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrintSmal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrintSmal.UseVisualStyleBackColor = true;
+            this.btnPrintSmal.Click += new System.EventHandler(this.btnPrintSmal_Click);
+            // 
+            // cbAutoPrint
+            // 
+            this.cbAutoPrint.AutoSize = true;
+            this.cbAutoPrint.Location = new System.Drawing.Point(195, 168);
+            this.cbAutoPrint.Name = "cbAutoPrint";
+            this.cbAutoPrint.Size = new System.Drawing.Size(181, 24);
+            this.cbAutoPrint.TabIndex = 11;
+            this.cbAutoPrint.Text = "Drukuj automatycznie";
+            this.cbAutoPrint.UseVisualStyleBackColor = true;
             // 
             // btnPrint
             // 
@@ -163,6 +191,13 @@
             this.imgList.Images.SetKeyName(1, "package.png");
             this.imgList.Images.SetKeyName(2, "kuser2.png");
             // 
+            // taskbarIcon
+            // 
+            this.taskbarIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("taskbarIcon.Icon")));
+            this.taskbarIcon.Text = "Brother Label API";
+            this.taskbarIcon.Visible = true;
+            this.taskbarIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.taskbarIcon_MouseDoubleClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +208,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Brother Label API";
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.tabControl1.ResumeLayout(false);
             this.tabBaselinkerProduct.ResumeLayout(false);
             this.tabBaselinkerProduct.PerformLayout();
@@ -194,6 +230,9 @@
         private System.Windows.Forms.TextBox txtEAN;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.CheckBox cbAutoPrint;
+        private System.Windows.Forms.Button btnPrintSmal;
+        private System.Windows.Forms.NotifyIcon taskbarIcon;
     }
 }
 

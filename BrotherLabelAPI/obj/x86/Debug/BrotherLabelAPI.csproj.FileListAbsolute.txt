@@ -15,3 +15,5 @@ E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\x86\Debug\BASELINKE
 E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\x86\Debug\NetFrameworkServer.dll
 E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\x86\Debug\Newtonsoft.Json.dll
 E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\x86\Debug\Newtonsoft.Json.xml
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\obj\x86\Debug\BrotherLabelAPI.WaitDialog.resources
+E:\OneDrive\VisualStudio\BrotherLabelAPI\BrotherLabelAPI\bin\x86\Debug\BASELINKER_PRODUKT_SMALL.lbx
