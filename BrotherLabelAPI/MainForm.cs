@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,17 +47,24 @@ namespace BrotherLabelAPI
 
         void startPrint(string file)
         {
+            //fixes bug which causes the font to shrink over time
+            string tempFile = "temp.lbx";
+            File.Copy(file, tempFile);
+
             DocumentClass doc = new DocumentClass();
 
-            if (doc.Open(file))
+            if (doc.Open(tempFile))
             {
-                doc.GetObject("textProductName").Text = txtProduct.Text;
+                string sku = txtSKU.Text.Trim();
+                if (sku.Length == 0)
+                    sku = txtID.Text.Trim();
 
-                setTextField(doc.GetObject("textProductID"), "ID:", txtID.Text);
-                setTextField(doc.GetObject("textSKU"), "SKU:", txtSKU.Text);
+                setTextField(doc.GetObject("textSKU"), "SKU:", sku);
                 setTextField(doc.GetObject("textEAN"), "EAN:", txtEAN.Text);
 
-                doc.GetObject("barcodeMain").Text = txtID.Text;
+                doc.GetObject("textProductName").Text = txtProduct.Text;
+
+                doc.GetObject("barcodeMain").Text = sku;
 
                 doc.Save();
                 doc.StartPrint("", PrintOptionConstants.bpoHighSpeed);
@@ -92,7 +100,7 @@ namespace BrotherLabelAPI
                 instance.txtSKU.Text = sku;
                 if (instance.cbAutoPrint.Checked)
                 {
-                    instance.Invoke(new Action(() => instance.btnPrint_Click(null, null)));
+                    instance.Invoke(new Action(() => instance.btnPrintSmal_Click(null, null)));
                 }
                 else
                 {

@@ -86,11 +86,11 @@
             // btnPrintSmal
             // 
             this.btnPrintSmal.Image = global::BrotherLabelAPI.Properties.Resources.filequickprint;
-            this.btnPrintSmal.Location = new System.Drawing.Point(18, 212);
+            this.btnPrintSmal.Location = new System.Drawing.Point(18, 162);
             this.btnPrintSmal.Name = "btnPrintSmal";
             this.btnPrintSmal.Size = new System.Drawing.Size(152, 35);
             this.btnPrintSmal.TabIndex = 12;
-            this.btnPrintSmal.Text = "Drukuj małą";
+            this.btnPrintSmal.Text = "Drukuj";
             this.btnPrintSmal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrintSmal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrintSmal.UseVisualStyleBackColor = true;
@@ -109,11 +109,11 @@
             // btnPrint
             // 
             this.btnPrint.Image = global::BrotherLabelAPI.Properties.Resources.filequickprint;
-            this.btnPrint.Location = new System.Drawing.Point(18, 162);
+            this.btnPrint.Location = new System.Drawing.Point(18, 203);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(152, 35);
             this.btnPrint.TabIndex = 10;
-            this.btnPrint.Text = "Drukuj";
+            this.btnPrint.Text = "Drukuj długą";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrint.UseVisualStyleBackColor = true;
