@@ -49,7 +49,7 @@ namespace BrotherLabelAPI
         {
             //fixes bug which causes the font to shrink over time
             string tempFile = "temp.lbx";
-            File.Copy(file, tempFile);
+            File.Copy(file, tempFile, true);
 
             DocumentClass doc = new DocumentClass();
 
